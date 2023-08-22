@@ -1,0 +1,13 @@
+class Solution {
+public:
+    vector<int> getConcatenation(vector<int>& nums) {
+        int n = nums.size();
+        //creating new vector 
+       vector<int> V;
+       //copying from original to newly created vector
+       V=nums;
+       //inserting the second vector from begining to end from starting of the first vector
+       nums.insert(nums.end(),V.begin(),V.end());
+       return nums;
+    }
+};
