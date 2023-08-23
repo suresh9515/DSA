@@ -1,0 +1,19 @@
+class Solution {
+public:
+    bool isPalindrome(string s) {
+        int low=0, high=s.size()-1;
+        transform(s.begin(),s.end(),s.begin(),::tolower);
+        while(low<=high){
+            if(!iswalnum(s[low])){
+                low++;
+            }else if(!iswalnum(s[high])){
+                high--;
+            }else if(s[low]!=s[high]){
+                return 0;
+            }else{
+                low++ ,high--;
+            }
+        }
+        return 1;
+    }
+};
