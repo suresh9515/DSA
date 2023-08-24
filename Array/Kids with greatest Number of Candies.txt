@@ -1,0 +1,18 @@
+class Solution {
+public:
+    vector<bool> kidsWithCandies(vector<int>& candies, int extraCandies) {
+        vector<bool> V;
+        //maximum element
+        int max = *max_element(candies.begin(),candies.end());
+        //checking whether the array any of elemnt is greater than i+extracandies
+        for(int x : candies){  
+            //checking each element 
+            if(x+extraCandies >= max){
+                V.push_back(1);
+            }else{
+                V.push_back(0);
+            }
+        }
+        return V;
+    }
+};
