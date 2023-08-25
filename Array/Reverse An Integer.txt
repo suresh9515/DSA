@@ -1,0 +1,61 @@
+class Solution {
+public:
+    int reverse(int x) {
+        long reverse =0;
+        while(x){
+            reverse  = reverse*10 +x %10;
+            x=x/10;
+        }
+        if(reverse>INT_MAX || reverse<INT_MIN){
+            return 0;
+        }
+        return int(reverse);
+    }
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//partial Solution
+// class Solution {
+// public:
+//     int reverse(int x) {
+//         //convert x into string
+//         std::string str = std::to_string(x);
+//         int low =0; int high = str.length()-1;
+//       while(low<high){
+//             swap(str[low],str[high]);
+//             low++;
+//             high--;
+
+//       }
+//       cout<<str;
+//     //   if(str[str.length()-1]=="0"){
+//     //       str.erase(str.end());
+//     //   } convert into number
+//    int myint1 = stoi(str);
+//    if(x <0){
+//        myint1 =myint1 *-1;
+//    }
+//         return myint1;
+
+//     }
+// };
