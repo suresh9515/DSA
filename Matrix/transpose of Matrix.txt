@@ -1,0 +1,19 @@
+-----------------Efficient Approach_____
+class Solution
+{   
+    public:  
+    //Function to find transpose of a matrix.
+    void transpose(vector<vector<int> >& matrix, int n)
+    { 
+        int rows = matrix.size();
+        int columns = matrix[0].size();
+
+        for (int i = 0; i < rows; i++) {
+            for (int j = i + 1; j < columns; j++) {
+                swap(matrix[i][j], matrix[j][i]);
+            }
+        }
+        
+        
+    }
+};
